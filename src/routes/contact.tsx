@@ -4,6 +4,7 @@ import { Phone, MapPin, Clock, Check } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { business } from "@/lib/site-data";
+import contactHero from "@/assets/service-living.jpg";
 import { PageHeader } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
