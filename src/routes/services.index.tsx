@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/lib/site-data";
+import servicesHero from "@/assets/service-fullhome.jpg";
 import { PageHeader, ConsultationCTA } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
