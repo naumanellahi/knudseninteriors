@@ -1,5 +1,6 @@
 import { PageHeader } from "./PageShell";
 import { Reveal } from "./Reveal";
+import legalHero from "@/assets/philosophy.jpg";
 
 export interface LegalSection {
   heading: string;
