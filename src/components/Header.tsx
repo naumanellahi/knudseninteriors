@@ -75,7 +75,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="glass mx-4 mt-3 rounded-2xl p-6 lg:hidden">
+        <div className="mx-4 mt-3 rounded-2xl border border-border/60 bg-card p-6 shadow-soft lg:hidden">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
               <Link
