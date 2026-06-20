@@ -178,7 +178,7 @@ function Index() {
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl text-primary">{s.title}</h3>
