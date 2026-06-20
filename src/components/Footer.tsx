@@ -71,9 +71,16 @@ export function Footer() {
         <div>
           <h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-primary">Contact</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-foreground" />
-              <span>{business.address.join(", ")}</span>
+            <li>
+              <a
+                href={business.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2.5 transition-colors hover:text-primary"
+              >
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-foreground" />
+                <span>{business.addressLine}</span>
+              </a>
             </li>
             <li>
               <a

@@ -24,8 +24,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass shadow-soft py-3" : "bg-transparent py-5"
+      className={`fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-card transition-all duration-500 ${
+        scrolled ? "shadow-soft py-3" : "py-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
@@ -75,7 +75,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="glass mx-4 mt-3 rounded-2xl p-6 lg:hidden">
+        <div className="mx-4 mt-3 rounded-2xl border border-border/60 bg-card p-6 shadow-soft lg:hidden">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
               <Link

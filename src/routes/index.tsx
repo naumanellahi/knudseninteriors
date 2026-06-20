@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Compass, Gem, HeartHandshake } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import aboutImg from "@/assets/about.jpg";
 import philosophyImg from "@/assets/philosophy.jpg";
 import { services, galleryImages } from "@/lib/site-data";
@@ -47,10 +48,7 @@ function Index() {
           playsInline
           poster={heroImg}
         >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-modern-and-elegant-living-room-43400-large.mp4"
-            type="video/mp4"
-          />
+          <source src={heroVideo.url} type="video/mp4" />
         </video>
         <div
           className="absolute inset-0 animate-kenburns bg-cover bg-center"
@@ -178,7 +176,7 @@ function Index() {
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl text-primary">{s.title}</h3>
@@ -223,11 +221,12 @@ function Index() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 via-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <span className="p-6 text-sm uppercase tracking-[0.2em] text-primary-foreground">
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end p-6">
+                  <span className="text-sm uppercase tracking-[0.2em] text-primary-foreground [text-shadow:0_1px_8px_oklch(0.2_0.05_150/0.85)]">
                     {img.label}
                   </span>
                 </div>
+
               </Reveal>
             ))}
           </div>

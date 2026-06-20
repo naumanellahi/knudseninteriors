@@ -109,7 +109,12 @@ function ContactPage() {
                 </span>
               </a>
 
-              <div className="glass flex items-start gap-4 rounded-3xl p-6">
+              <a
+                href={business.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass flex items-start gap-4 rounded-3xl p-6 transition-transform hover:-translate-y-1"
+              >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-gold text-gold-foreground">
                   <MapPin className="h-5 w-5" />
                 </span>
@@ -125,7 +130,7 @@ function ContactPage() {
                     ))}
                   </span>
                 </span>
-              </div>
+              </a>
 
               <div className="glass flex items-start gap-4 rounded-3xl p-6">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-gold text-gold-foreground">
