@@ -63,39 +63,38 @@ function Index() {
 
         <div className="relative mx-auto w-full max-w-7xl px-5 lg:px-8">
           <div className="max-w-3xl">
-            <Reveal>
+            <div className="anim-up" style={{ animationDelay: "0ms" }}>
               <span className="inline-block rounded-full border border-primary-foreground/30 px-4 py-1.5 text-xs uppercase tracking-[0.34em] text-primary-foreground/90">
                 Premium Interior Design Studio
               </span>
-            </Reveal>
-            <Reveal delay={150}>
+            </div>
+            <div className="anim-up" style={{ animationDelay: "150ms" }}>
               <h1 className="mt-6 text-4xl leading-[1.05] text-primary-foreground sm:text-5xl lg:text-7xl">
                 Transforming Spaces Into Timeless Luxury Interiors
               </h1>
-            </Reveal>
-            <Reveal delay={300}>
+            </div>
+            <div className="anim-up" style={{ animationDelay: "300ms" }}>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-primary-foreground/90">
                 Knudsen Interiors creates refined interior design solutions with elegant concepts,
                 modern aesthetics, and beautifully curated spaces.
               </p>
-            </Reveal>
-            <Reveal delay={450}>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Link
-                  to="/services"
-                  className="shimmer flex items-center gap-2 rounded-full bg-card px-8 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-primary shadow-luxe transition-transform hover:scale-[1.04]"
-                >
-                  Explore Services <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="rounded-full border border-primary-foreground/50 px-8 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-primary-foreground backdrop-blur-sm transition-colors hover:bg-primary-foreground/10"
-                >
-                  Book Consultation
-                </Link>
-              </div>
-            </Reveal>
+            </div>
+            <div className="anim-up mt-10 flex flex-wrap gap-4" style={{ animationDelay: "450ms" }}>
+              <Link
+                to="/services"
+                className="shimmer flex items-center gap-2 rounded-full bg-card px-8 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-primary shadow-luxe transition-transform hover:scale-[1.04]"
+              >
+                Explore Services <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="rounded-full border border-primary-foreground/50 px-8 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-primary-foreground backdrop-blur-sm transition-colors hover:bg-primary-foreground/10"
+              >
+                Book Consultation
+              </Link>
+            </div>
           </div>
+
         </div>
       </section>
 
