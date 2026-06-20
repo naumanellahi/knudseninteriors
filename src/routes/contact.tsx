@@ -44,6 +44,7 @@ function ContactPage() {
         eyebrow="Get In Touch"
         title="Book Your Consultation"
         subtitle="Let's discuss your space and vision. Arrange a private consultation with our design studio today."
+        image={contactHero}
       />
 
       <section className="py-20 lg:py-28">
