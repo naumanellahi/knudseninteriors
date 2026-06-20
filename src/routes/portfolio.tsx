@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { galleryImages, services } from "@/lib/site-data";
+import portfolioHero from "@/assets/portfolio-dining.jpg";
 import { PageHeader, ConsultationCTA } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
