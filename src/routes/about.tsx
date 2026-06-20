@@ -38,6 +38,7 @@ function AboutPage() {
         eyebrow="About The Studio"
         title="Knudsen Interiors"
         subtitle="A premium interior design studio crafting sophisticated, timeless and beautifully considered spaces."
+        image={aboutImg}
       />
 
       <section className="py-20 lg:py-28">

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/lib/site-data";
+import servicesHero from "@/assets/service-fullhome.jpg";
 import { PageHeader, ConsultationCTA } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
@@ -30,6 +31,7 @@ function ServicesPage() {
         eyebrow="Our Services"
         title="Luxury Interior Design Services"
         subtitle="A refined collection of high-end design solutions, each crafted to transform your space into a timeless, sophisticated environment."
+        image={servicesHero}
       />
 
       <section className="py-20 lg:py-28">

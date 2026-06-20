@@ -6,13 +6,32 @@ export function PageHeader({
   eyebrow,
   title,
   subtitle,
+  image,
 }: {
   eyebrow: string;
   title: string;
   subtitle?: string;
+  image?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-sage pb-16 pt-36 lg:pt-44">
+      {image && (
+        <>
+          <img
+            src={image}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, oklch(0.2 0.08 150 / 0.78) 0%, oklch(0.28 0.09 150 / 0.62) 60%, oklch(0.3 0.09 150 / 0.72) 100%)",
+            }}
+          />
+        </>
+      )}
       <div className="absolute -left-16 top-24 h-64 w-64 animate-float-slow rounded-full bg-gold/25 blur-3xl" />
       <div className="absolute right-0 top-10 h-72 w-72 animate-float-slower rounded-full bg-primary-glow/20 blur-3xl" />
       <div className="relative mx-auto max-w-4xl px-5 text-center lg:px-8">
@@ -20,11 +39,21 @@ export function PageHeader({
           <span className="text-xs uppercase tracking-[0.4em] text-gold-foreground">{eyebrow}</span>
         </Reveal>
         <Reveal delay={120}>
-          <h1 className="mt-5 text-4xl text-primary md:text-6xl">{title}</h1>
+          <h1
+            className={`mt-5 text-4xl md:text-6xl ${
+              image ? "text-primary-foreground [text-shadow:0_2px_24px_oklch(0.2_0.05_150/0.6)]" : "text-primary"
+            }`}
+          >
+            {title}
+          </h1>
         </Reveal>
         {subtitle && (
           <Reveal delay={220}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p
+              className={`mx-auto mt-6 max-w-2xl text-lg leading-relaxed ${
+                image ? "text-primary-foreground/90" : "text-muted-foreground"
+              }`}
+            >
               {subtitle}
             </p>
           </Reveal>

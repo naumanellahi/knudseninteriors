@@ -1,5 +1,6 @@
 import { PageHeader } from "./PageShell";
 import { Reveal } from "./Reveal";
+import legalHero from "@/assets/philosophy.jpg";
 
 export interface LegalSection {
   heading: string;
@@ -17,7 +18,7 @@ export function LegalPage({
 }) {
   return (
     <>
-      <PageHeader eyebrow="Legal" title={title} subtitle={intro} />
+      <PageHeader eyebrow="Legal" title={title} subtitle={intro} image={legalHero} />
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-3xl space-y-10 px-5 lg:px-8">
           <Reveal>

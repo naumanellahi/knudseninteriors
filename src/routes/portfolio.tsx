@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { galleryImages, services } from "@/lib/site-data";
+import portfolioHero from "@/assets/portfolio-dining.jpg";
 import { PageHeader, ConsultationCTA } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
@@ -38,7 +39,9 @@ function PortfolioPage() {
         eyebrow="Design Inspirations"
         title="Interior Concepts"
         subtitle="A curated collection of luxury concept interiors, modern design examples and refined style directions that capture the spirit of our work."
+        image={portfolioHero}
       />
+
 
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
