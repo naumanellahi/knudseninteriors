@@ -31,6 +31,7 @@ function ServicesPage() {
         eyebrow="Our Services"
         title="Luxury Interior Design Services"
         subtitle="A refined collection of high-end design solutions, each crafted to transform your space into a timeless, sophisticated environment."
+        image={servicesHero}
       />
 
       <section className="py-20 lg:py-28">
