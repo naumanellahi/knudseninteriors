@@ -48,14 +48,7 @@ function Index() {
           playsInline
           poster={heroImg}
         >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-going-through-the-rooms-of-a-luxurious-house-44572-large.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-modern-and-elegant-living-room-43400-large.mp4"
-            type="video/mp4"
-          />
+          <source src={heroVideo.url} type="video/mp4" />
         </video>
         <div
           className="absolute inset-0 animate-kenburns bg-cover bg-center"
