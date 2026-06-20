@@ -199,11 +199,19 @@ export const galleryImages = [
   { src: residential, label: "Open-Plan Residence" },
   { src: bedroom, label: "Serene Master Retreat" },
   { src: space, label: "Light-Filled Apartment" },
+  { src: portfolioDining, label: "Spring Green Dining Room" },
+  { src: portfolioStudy, label: "Refined Home Study" },
 ];
+
+const addressLines = ["10 Nikkis House", "8 Bonnersfield Lane", "Harrow Middx", "HA1 2AP"];
 
 export const business = {
   name: "Knudsen Interiors",
-  phone: "02036339965",
-  phoneDisplay: "020 3633 9965",
-  address: ["10 Nikkis House", "8 Bonnersfield Lane", "Harrow Middx", "HA1 2AP"],
+  phone: "+442036339965",
+  phoneDisplay: "+44 20 3633 9965",
+  address: addressLines,
+  addressLine: addressLines.join(", "),
+  mapsUrl: `https://maps.google.com/?q=${encodeURIComponent(
+    "Knudsen Interiors, " + addressLines.join(", "),
+  )}`,
 };
