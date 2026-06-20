@@ -74,7 +74,7 @@ function ServiceDetail() {
 
             <h2 className="mt-12 text-3xl text-primary">The Benefits</h2>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-              {service.benefits.map((b) => (
+              {service.benefits.map((b: string) => (
                 <li key={b} className="flex items-start gap-3 rounded-2xl bg-card p-5 shadow-soft">
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-gold text-gold-foreground">
                     <Check className="h-3.5 w-3.5" />
@@ -118,7 +118,7 @@ function ServiceDetail() {
             <h2 className="mt-5 text-4xl text-primary">A considered journey</h2>
           </Reveal>
           <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {service.process.map((p, i) => (
+            {service.process.map((p: { step: string; detail: string }, i: number) => (
               <Reveal key={p.step} delay={i * 80}>
                 <div className="h-full rounded-3xl bg-card p-7 shadow-soft">
                   <span className="font-serif text-4xl text-gradient">0{i + 1}</span>
