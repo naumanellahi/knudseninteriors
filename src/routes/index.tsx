@@ -69,7 +69,7 @@ function Index() {
               </span>
             </div>
             <div className="anim-up" style={{ animationDelay: "150ms" }}>
-              <h1 className="mt-6 text-4xl leading-[1.05] text-primary-foreground sm:text-5xl lg:text-7xl">
+              <h1 className="mt-6 text-4xl leading-[1.05] text-primary-foreground [text-shadow:0_2px_30px_oklch(0.2_0.05_150/0.45)] sm:text-5xl lg:text-7xl">
                 Transforming Spaces Into Timeless Luxury Interiors
               </h1>
             </div>
