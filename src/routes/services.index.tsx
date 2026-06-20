@@ -4,7 +4,7 @@ import { services } from "@/lib/site-data";
 import { PageHeader, ConsultationCTA } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Luxury Interior Design Services | Knudsen Interiors" },
