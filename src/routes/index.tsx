@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Compass, Gem, HeartHandshake } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import aboutImg from "@/assets/about.jpg";
 import philosophyImg from "@/assets/philosophy.jpg";
 import { services, galleryImages } from "@/lib/site-data";
