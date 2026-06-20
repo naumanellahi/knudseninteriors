@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsConditionsRouteImport } from './routes/terms-conditions'
+import { Route as ReturnPolicyRouteImport } from './routes/return-policy'
 import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -23,6 +24,11 @@ import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 const TermsConditionsRoute = TermsConditionsRouteImport.update({
   id: '/terms-conditions',
   path: '/terms-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnPolicyRoute = ReturnPolicyRouteImport.update({
+  id: '/return-policy',
+  path: '/return-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RefundPolicyRoute = RefundPolicyRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
+  '/return-policy': typeof ReturnPolicyRoute
   '/terms-conditions': typeof TermsConditionsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
+  '/return-policy': typeof ReturnPolicyRoute
   '/terms-conditions': typeof TermsConditionsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services': typeof ServicesIndexRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
+  '/return-policy': typeof ReturnPolicyRoute
   '/terms-conditions': typeof TermsConditionsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy-policy'
     | '/refund-policy'
+    | '/return-policy'
     | '/terms-conditions'
     | '/services/$slug'
     | '/services/'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy-policy'
     | '/refund-policy'
+    | '/return-policy'
     | '/terms-conditions'
     | '/services/$slug'
     | '/services'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy-policy'
     | '/refund-policy'
+    | '/return-policy'
     | '/terms-conditions'
     | '/services/$slug'
     | '/services/'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RefundPolicyRoute: typeof RefundPolicyRoute
+  ReturnPolicyRoute: typeof ReturnPolicyRoute
   TermsConditionsRoute: typeof TermsConditionsRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       path: '/terms-conditions'
       fullPath: '/terms-conditions'
       preLoaderRoute: typeof TermsConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/return-policy': {
+      id: '/return-policy'
+      path: '/return-policy'
+      fullPath: '/return-policy'
+      preLoaderRoute: typeof ReturnPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/refund-policy': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RefundPolicyRoute: RefundPolicyRoute,
+  ReturnPolicyRoute: ReturnPolicyRoute,
   TermsConditionsRoute: TermsConditionsRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,
