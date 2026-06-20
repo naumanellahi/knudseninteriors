@@ -6,6 +6,8 @@ import kitchen from "@/assets/service-kitchen.jpg";
 import living from "@/assets/service-living.jpg";
 import bedroom from "@/assets/service-bedroom.jpg";
 import fullhome from "@/assets/service-fullhome.jpg";
+import portfolioDining from "@/assets/portfolio-dining.jpg";
+import portfolioStudy from "@/assets/portfolio-study.jpg";
 
 export interface Service {
   slug: string;
