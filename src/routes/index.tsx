@@ -50,11 +50,6 @@ function Index() {
         >
           <source src={heroVideo.url} type="video/mp4" />
         </video>
-        <div
-          className="absolute inset-0 animate-kenburns bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImg})` }}
-          aria-hidden
-        />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="absolute left-12 top-1/3 hidden h-24 w-24 animate-float-slow rounded-full bg-gold/40 blur-2xl lg:block" />
         <div className="absolute bottom-24 right-16 hidden h-32 w-32 animate-float-slower rounded-full bg-primary-glow/40 blur-3xl lg:block" />
