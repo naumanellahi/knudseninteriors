@@ -95,6 +95,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Knudsen Interiors | Luxury Interior Design Studio" },
+      { name: "description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
+      { property: "og:description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
+      { name: "twitter:description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0UOfsLjQqvSON9b2ul6wE21sKuz1/social-images/social-1781979531503-png-clipart-flat-gradient-social-media-icons-kickstarter-green-and-white-letter-k-art-thumbnail.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0UOfsLjQqvSON9b2ul6wE21sKuz1/social-images/social-1781979531503-png-clipart-flat-gradient-social-media-icons-kickstarter-green-and-white-letter-k-art-thumbnail.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
