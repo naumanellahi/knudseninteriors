@@ -254,7 +254,7 @@ function Index() {
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {philosophyPoints.map((p, i) => (
                 <Reveal key={p.title} delay={i * 90}>
-                  <div className="glass h-full rounded-2xl p-6">
+                  <div className="glass h-full rounded-2xl border border-gold/40 p-6">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-gold text-gold-foreground">
                       <p.icon className="h-5 w-5" />
                     </div>
