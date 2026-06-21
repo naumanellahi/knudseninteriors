@@ -73,61 +73,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Knudsen Interiors | Luxury Interior Design Studio" },
-      {
-        name: "description",
-        content:
-          "Knudsen Interiors is a premium London interior design studio creating timeless, luxurious and beautifully curated spaces.",
-      },
-      { name: "author", content: "Knudsen Interiors" },
-      { property: "og:title", content: "Knudsen Interiors | Luxury Interior Design Studio" },
-      {
-        property: "og:description",
-        content:
-          "Transforming spaces into timeless luxury interiors with refined concepts and modern aesthetics.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Knudsen Interiors | Luxury Interior Design Studio" },
-      { name: "description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
-      { property: "og:description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
-      { name: "twitter:description", content: "Knudsen Interiors offers premium luxury interior design services, transforming spaces into elegant, modern living environments." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0UOfsLjQqvSON9b2ul6wE21sKuz1/social-images/social-1781979531503-png-clipart-flat-gradient-social-media-icons-kickstarter-green-and-white-letter-k-art-thumbnail.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0UOfsLjQqvSON9b2ul6wE21sKuz1/social-images/social-1781979531503-png-clipart-flat-gradient-social-media-icons-kickstarter-green-and-white-letter-k-art-thumbnail.webp" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function ScrollToTop() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
