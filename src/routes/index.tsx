@@ -50,28 +50,29 @@ function Index() {
         >
           <source src={heroVideo.url} type="video/mp4" />
         </video>
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
+        
         <div className="absolute left-12 top-1/3 hidden h-24 w-24 animate-float-slow rounded-full bg-gold/40 blur-2xl lg:block" />
         <div className="absolute bottom-24 right-16 hidden h-32 w-32 animate-float-slower rounded-full bg-primary-glow/40 blur-3xl lg:block" />
 
         <div className="relative mx-auto w-full max-w-7xl px-5 lg:px-8">
           <div className="max-w-3xl">
             <div className="anim-up" style={{ animationDelay: "0ms" }}>
-              <span className="inline-block rounded-full border border-primary-foreground/30 px-4 py-1.5 text-xs uppercase tracking-[0.34em] text-primary-foreground/90">
+              <span className="inline-block rounded-full border border-primary-foreground/50 bg-primary/30 px-4 py-1.5 text-xs uppercase tracking-[0.34em] text-primary-foreground backdrop-blur-sm [text-shadow:0_1px_12px_oklch(0.18_0.05_150/0.9)]">
                 Premium Interior Design Studio
               </span>
             </div>
             <div className="anim-up" style={{ animationDelay: "150ms" }}>
-              <h1 className="mt-6 text-4xl leading-[1.05] text-primary-foreground [text-shadow:0_2px_30px_oklch(0.2_0.05_150/0.45)] sm:text-5xl lg:text-7xl">
+              <h1 className="mt-6 text-4xl leading-[1.05] text-primary-foreground [text-shadow:0_2px_24px_oklch(0.14_0.05_150/0.95),0_1px_4px_oklch(0.14_0.05_150/0.9)] sm:text-5xl lg:text-7xl">
                 Transforming Spaces Into Timeless Luxury Interiors
               </h1>
             </div>
             <div className="anim-up" style={{ animationDelay: "300ms" }}>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-primary-foreground/90">
+              <p className="mt-7 max-w-xl text-lg leading-relaxed text-primary-foreground [text-shadow:0_1px_14px_oklch(0.16_0.05_150/0.95)]">
                 Knudsen Interiors creates refined interior design solutions with elegant concepts,
                 modern aesthetics, and beautifully curated spaces.
               </p>
             </div>
+
             <div className="anim-up mt-10 flex flex-wrap gap-4" style={{ animationDelay: "450ms" }}>
               <Link
                 to="/services"
@@ -160,7 +161,7 @@ function Index() {
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group block h-full overflow-hidden rounded-3xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-luxe"
+                  className="group block h-full overflow-hidden rounded-3xl border border-gold/40 bg-card shadow-soft ring-1 ring-border/40 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe hover:ring-gold/50"
                 >
                   <div className="relative h-52 overflow-hidden">
                     <img
@@ -204,7 +205,7 @@ function Index() {
               <Reveal
                 key={img.label}
                 delay={i * 60}
-                className={`group relative overflow-hidden rounded-3xl shadow-soft ${
+                className={`group relative overflow-hidden rounded-3xl border border-gold/40 shadow-soft ${
                   i === 0 ? "col-span-2 row-span-2" : i === 3 ? "lg:col-span-2" : ""
                 }`}
               >
@@ -253,7 +254,7 @@ function Index() {
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {philosophyPoints.map((p, i) => (
                 <Reveal key={p.title} delay={i * 90}>
-                  <div className="glass h-full rounded-2xl p-6">
+                  <div className="glass h-full rounded-2xl border border-gold/40 p-6">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-gold text-gold-foreground">
                       <p.icon className="h-5 w-5" />
                     </div>
