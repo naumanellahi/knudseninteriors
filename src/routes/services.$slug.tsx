@@ -120,7 +120,7 @@ function ServiceDetail() {
           <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {service.process.map((p: { step: string; detail: string }, i: number) => (
               <Reveal key={p.step} delay={i * 80}>
-                <div className="h-full rounded-3xl bg-card p-7 shadow-soft">
+                <div className="h-full rounded-3xl border border-gold/40 bg-card p-7 shadow-soft">
                   <span className="font-serif text-4xl text-gradient">0{i + 1}</span>
                   <h3 className="mt-4 text-xl text-primary">{p.step}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.detail}</p>
@@ -143,7 +143,7 @@ function ServiceDetail() {
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group block overflow-hidden rounded-3xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-luxe"
+                  className="group block overflow-hidden rounded-3xl border border-gold/40 bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe"
                 >
                   <div className="h-44 overflow-hidden">
                     <img

@@ -48,7 +48,7 @@ function PortfolioPage() {
           <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
             {inspirations.map((img, i) => (
               <Reveal key={`${img.label}-${i}`} delay={(i % 3) * 80}>
-                <div className="group relative overflow-hidden rounded-3xl shadow-soft">
+                <div className="group relative overflow-hidden rounded-3xl border border-gold/40 shadow-soft">
                   <img
                     src={img.src}
                     alt={img.label}
