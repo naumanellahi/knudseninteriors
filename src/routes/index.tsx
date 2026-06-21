@@ -161,7 +161,7 @@ function Index() {
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group block h-full overflow-hidden rounded-3xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-luxe"
+                  className="group block h-full overflow-hidden rounded-3xl border border-gold/40 bg-card shadow-soft ring-1 ring-border/40 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe hover:ring-gold/50"
                 >
                   <div className="relative h-52 overflow-hidden">
                     <img
