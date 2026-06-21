@@ -205,7 +205,7 @@ function Index() {
               <Reveal
                 key={img.label}
                 delay={i * 60}
-                className={`group relative overflow-hidden rounded-3xl shadow-soft ${
+                className={`group relative overflow-hidden rounded-3xl border border-gold/40 shadow-soft ${
                   i === 0 ? "col-span-2 row-span-2" : i === 3 ? "lg:col-span-2" : ""
                 }`}
               >
