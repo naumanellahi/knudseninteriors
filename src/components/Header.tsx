@@ -51,6 +51,13 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
+            href={`mailto:${business.email}`}
+            className="flex items-center gap-2 text-sm text-foreground/80 transition-colors hover:text-primary"
+          >
+            <Mail className="h-4 w-4" />
+            {business.email}
+          </a>
+          <a
             href={`tel:${business.phone}`}
             className="flex items-center gap-2 text-sm text-foreground/80 transition-colors hover:text-primary"
           >
