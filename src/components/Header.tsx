@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { business } from "@/lib/site-data";
 
 const navItems = [
