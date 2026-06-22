@@ -209,6 +209,7 @@ export const business = {
   name: "Knudsen Interiors",
   phone: "+442036339965",
   phoneDisplay: "+44 20 3633 9965",
+  email: "info@knudseninteriors.co.uk",
   address: addressLines,
   addressLine: addressLines.join(", "),
   mapsUrl: `https://maps.google.com/?q=${encodeURIComponent(
