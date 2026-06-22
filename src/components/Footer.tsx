@@ -91,9 +91,14 @@ export function Footer() {
                 {business.phoneDisplay}
               </a>
             </li>
-            <li className="flex items-center gap-2.5">
-              <Mail className="h-4 w-4 text-gold-foreground" />
-              <span>Book a private consultation</span>
+            <li>
+              <a
+                href={`mailto:${business.email}`}
+                className="flex items-center gap-2.5 transition-colors hover:text-primary"
+              >
+                <Mail className="h-4 w-4 text-gold-foreground" />
+                {business.email}
+              </a>
             </li>
           </ul>
         </div>
