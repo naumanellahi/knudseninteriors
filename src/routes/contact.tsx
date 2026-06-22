@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, MapPin, Clock, Check } from "lucide-react";
+import { Phone, MapPin, Clock, Check, Mail } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { business } from "@/lib/site-data";
@@ -110,6 +110,22 @@ function ContactPage() {
                   <span className="mt-1 block text-lg text-primary">{business.phoneDisplay}</span>
                 </span>
               </a>
+
+              <a
+                href={`mailto:${business.email}`}
+                className="glass flex items-start gap-4 rounded-3xl p-6 transition-transform hover:-translate-y-1"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-gold text-gold-foreground">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-xs uppercase tracking-[0.2em] text-gold-foreground">
+                    Email Us
+                  </span>
+                  <span className="mt-1 block text-lg text-primary">{business.email}</span>
+                </span>
+              </a>
+
 
               <a
                 href={business.mapsUrl}
