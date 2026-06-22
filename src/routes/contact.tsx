@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, MapPin, Clock, Check } from "lucide-react";
+import { Phone, MapPin, Clock, Check, Mail } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { business } from "@/lib/site-data";
