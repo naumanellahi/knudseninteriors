@@ -97,6 +97,9 @@ export function Header() {
             <a href={`tel:${business.phone}`} className="flex items-center gap-2 text-foreground/80">
               <Phone className="h-4 w-4" /> {business.phoneDisplay}
             </a>
+            <a href={`mailto:${business.email}`} className="flex items-center gap-2 text-foreground/80">
+              <Mail className="h-4 w-4" /> {business.email}
+            </a>
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
